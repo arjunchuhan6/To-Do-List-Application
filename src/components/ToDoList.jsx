@@ -19,16 +19,16 @@ function ToDoList(props) {
 
     //Event for handling Edit a task
     function editTask(index, newText) {
-        const updatedTodos = todo.map((task, id) =>
+        const newTodos = todo.map((task, id) =>
             id === index ? { ...task, task: newText } : task
         );
-        setTodo(updatedTodos);
+        setTodo(newTodos);
     }
 
     //Event for  handling Delete a task
     function deleteTask(index) {
-        const updatedTodos = todo.filter((_, id) => id !== index);
-        setTodo(updatedTodos);
+        const newTodos = todo.filter((_,id) => id !== index);
+        setTodo(newTodos);
     }
 
     return (
